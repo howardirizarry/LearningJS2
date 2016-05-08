@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Learning JS 2</title>
+	</head>
+	<body>
+
+	<div id="header">
+		<h1>Howie</h1>
+	</div>
+	<div id="content">
+		<h2>Here is my content</h2>
+		<ul>
+			<li>line 1</li>
+			<li>line 2</li>
+		</ul>
+		
+		<input id="name" type="text" onFocus="this.value='';" value="Enter Text" onchange="ChooseContact(this);"></input>
+		<button id="addOne">Add</button>
+		<button id="removeOne">Remove First Line</button>
+	</div>
+	<div id="footer">&copy;2016</div>
+
+	<script   src="http://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
+
+	<script>
+		$('#header h1').html('My Awesome Site');
+		$('ul').append('<li>added dynamically</li>');
+		$('ul').prepend('<li>added before dynamically</li>');
+		$('ul li:eq(0)').remove();
+		$('#addOne').click(function addValue() {
+			var value = $('#name').val();	
+				alert('You have added ' + value);
+				$('ul').append('<li>' + value + '</li>');
+		});
+		$('#removeOne').click(function removeValue() {
+			$('ul li:eq(0)').remove();
+		});
+		
+	</script>
+	</body>
+</html>
