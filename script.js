@@ -9,3 +9,5 @@ var balance = 160354.2165;
 	document.write('Your monthly payment: ',((balance/mort30)/12).toFixed(2), '<br/>');
 	document.write('Your monthly payment w/ interest: ', ((( (balance * interest)+(balance) )/mort30)/12).toFixed(2), '<br/>');
 	document.write('Total Interest Owed: ', (balance * interest).toFixed(1), '<br/>');
+	console.log('test');
+	
